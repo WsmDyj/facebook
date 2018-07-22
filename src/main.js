@@ -5,7 +5,6 @@ import App from './App'
 import router from './router'
 import VueI18n from 'vue-i18n'
 import store from './store'
-import 'normalize.css'
 import Vant from 'vant'
 import 'vant/lib/vant-css/index.css'
 

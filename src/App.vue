@@ -14,5 +14,5 @@ export default {
 <style>
   @import './common/iconfonts/iconfont.css';
   @import '../static/reset.css';
- 
+
 </style>

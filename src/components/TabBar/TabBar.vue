@@ -11,11 +11,11 @@
                     <i class="iconfont icon-users icon"></i>
                 </router-link>
             </li>
-            <li>
+            <!-- <li>
                 <router-link to="/video">
                     <i class="iconfont icon-dianshi icon"></i>
                 </router-link>
-            </li>
+            </li> -->
             <li> 
                 <router-link to="/notice">
                     <i class="iconfont icon-tongzhi icon"></i>

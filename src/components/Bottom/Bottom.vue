@@ -28,6 +28,5 @@ export default {
         border-1px(#ccd0d5)
         .text
             color $fb
-            
 </style>
 

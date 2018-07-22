@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <button class="btn" :class="[{'loginBtn': login,'registerBtn':register}]" >
+        <button class="btn" :class="[{'loginBtn': login,'registerBtn':register,'smallBtn':small,'type':type,'addBtn': add}]" >
+            <i class="iconfont icon-jiahaoyou" v-if="add"></i>
             <slot/>
         </button>
     </div>
@@ -10,7 +11,10 @@
 export default {
     props: {
         register: Boolean,
-        login: Boolean
+        login: Boolean,
+        small: Boolean,
+        type:Boolean,
+        add:Boolean
     }
 }
 </script>
@@ -34,4 +38,16 @@ export default {
         border 1px solid #3578e5
         color #3578e5
         background-color #ffffff 
+    .smallBtn
+        wh(100px,28px)
+        font-size 12px
+    .type 
+        wh(100px,28px)
+        background-color #fff
+        border 1px solid $bc
+        sc(12px, #575d68)
+    .addBtn
+        wh(160px,28px)
+        sc(12px, #fff)
+
 </style>

@@ -12,7 +12,6 @@ let router = new Router();
 app.use(cors())
 router.use('/api/user',user.routes())
 app.use(bodyParser());
-//加载如有中间件
 app.use(router.routes())
 app.use(router.allowedMethods())
 
@@ -20,9 +19,7 @@ app.use(async(ctx)=>{
     ctx.body = '<h1>hello Koa2</h1>'
 })
 
-// 
-
- 
+// 启动端口
 app.listen(3000,()=>{
     console.log('[Server] starting at port 3000')
 });

@@ -3,15 +3,11 @@ const mongoose = require('mongoose')
 
 let router = new Router()
 
-
 router.get('/',async (ctx) =>{
     ctx.body = '这是用户操作首页'
 })
-
 router.post('/register',async(ctx)=>{
     const User = mongoose.model('User')
-
-    //接受的post数据封装晨给一个新的user对象
     let newUser = new User(ctx.request.body)
     await newUser.save().then(()=>{
         ctx.body={
@@ -25,14 +21,11 @@ router.post('/register',async(ctx)=>{
         }
     })
 })
-
 router.post('/login',async(ctx)=> {
-    //得到前台传过来的数据
     let loginUser = ctx.request.body
     let userName = loginUser.userName
     let password = loginUser.password
     const User = mongoose.model('User')
-    //查找用户名是否存在，如果存在开始对比密码
     await User.findOne({userName:userName}).exec().then(async(result)=>{
         if (result) {
             if(password === result.password) {
@@ -48,5 +41,4 @@ router.post('/login',async(ctx)=> {
             ctx.body = {code:500,message:error}
         })
 })
- 
 module.exports = router;
