@@ -1,8 +1,6 @@
 # facebook
 ## Introduction
-
    This is a lightweight facebook mobile app that lives in [vue](https://cn.vuejs.org/) and [Vant](https://cn.vuejs.org/). 
-================
    It USES the latest front-end technology stack, built-in i18 internationalized solutions, backstage build user login registration, provide rich functional components, it can help you quickly build a lightweight app prototype. Believe this project will help you.
 
 ## Build Setup
